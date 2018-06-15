@@ -9,11 +9,6 @@
 
 #include "Arduino.h"
 
-struct Channel {
-  int pin;
-  int value;
-};
-
 class RC_Receiver
 {
   private:
