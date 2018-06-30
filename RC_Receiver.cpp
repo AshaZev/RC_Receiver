@@ -11,7 +11,7 @@
 RC_Receiver::RC_Receiver(int numberOfChannels)
 {
   //create array of channels
-  *channel = (int)calloc(numberOfChannels, sizeof(int));
+  channel = (int*)calloc(numberOfChannels, sizeof(int));
 }
 
 void RC_Receiver::setChannel(int channelNumber, int pin)
@@ -22,7 +22,8 @@ void RC_Receiver::setChannel(int channelNumber, int pin)
 int RC_Receiver::readChannel(int channelNumber)
 {
   int value = 1500;
-  value = pulseIn(channelNumber, HIGH, 2500);
+  int pin = channel[channelNumber];
+  value = pulseIn(pin, HIGH, 25000);
   // LOG VALUE
   if(value == 0)
   {

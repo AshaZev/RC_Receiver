@@ -12,7 +12,7 @@
 class RC_Receiver
 {
   private:
-  int channel[];
+  int * channel;
 
   public:
   RC_Receiver(int numberOfChannels);
