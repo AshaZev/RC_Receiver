@@ -1,7 +1,7 @@
 /*
 # RC_Receiver.cpp - Library for receiving data from an RC system.
-# Created by AshaZev, 13/03/2017.
-# Last updated, 07/06/2017.
+# Created by AshaZev, 2017/03/13.
+# Last updated, 2017/06/07.
 */
 
 #include "Arduino.h"
