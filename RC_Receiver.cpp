@@ -1,7 +1,7 @@
 /*
 # RC_Receiver.cpp - Library for receiving data from an RC system.
 # Created by AshaZev, 2017/03/13.
-# Last updated, 2017/06/07.
+# Last updated, 2019/01/04.
 */
 
 #include "Arduino.h"
@@ -23,7 +23,7 @@ int RC_Receiver::readChannel(int channelNumber)
 {
   int value = 1500;
   int pin = channel[channelNumber];
-  value = pulseIn(pin, HIGH, 25000);
+  value = pulseIn(pin, HIGH, 100000);
   // LOG VALUE
   if(value == 0)
   {
